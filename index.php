@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>strona</title>
+    <title>Bartosz Bieniek</title>
 </head>
 <body>
-    <h2>DODAWANIE PRACOWNIKA</h2>
+    <h2>Dodaj Pracownika</h2>
     <form action="insert.php" method="POST">
-	    	<label>Imię: </label><input type="text" name="imie"></br>
-		    <label>Dział: </label><input type="number" name="dzial"></br>
-		    <label>Zarobki: </label><input type="number" name="zarobki"></br>
-		    <label>Data urodzenia: </label><input type="date" name="data_urodzenia"></br>
-	    	<input type="submit" value="dodaj pracownika">
+	    <label>Imię: </label><input type="text" name="imie"></br>
+		<label>Dział: </label><input type="number" name="dzial"></br>
+		<label>Zarobki: </label><input type="number" name="zarobki"></br>
+		<label>Data urodzenia: </label><input type="date" name="data_urodzenia"></br>
+	    <input type="submit" value="dodaj pracownika">
 	</form>
 <?php
-echo("<br><li>info z dockera,:) ");
 
 $servername = "db";
 $username = "root";
@@ -42,10 +41,7 @@ if ($conn->connect_error) {
             echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dzial'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['data_urodzenia'].'</td><td>'.$row['id_org'].'</td><td>'.$row['nazwa_dzial'].'</td>');
             echo('</tr>');
      }
-        echo('</table>'."<br>");
-        //echo("zmiany");
-        //$d=strtotime("now");
-        //echo "<li>".date("Y-m-d h:i:sa", $d) . "<br>";
+       
 
 ?>
 </body>
